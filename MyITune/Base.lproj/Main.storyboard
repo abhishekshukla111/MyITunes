@@ -104,7 +104,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld7-M0-n8u">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="110"/>
                                         <connections>
-                                            <segue destination="wpY-aD-Xv7" kind="show" id="U5Z-le-1qv"/>
+                                            <action selector="mediaTypeButtionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ol-8n-upW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -187,7 +187,7 @@
         <!--Select Media Types-->
         <scene sceneID="bd8-kh-bhm">
             <objects>
-                <viewController id="wpY-aD-Xv7" customClass="SelectMediaViewController" customModule="MyITune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectMediaViewController" id="wpY-aD-Xv7" customClass="SelectMediaViewController" customModule="MyITune" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OtR-Jw-ynD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

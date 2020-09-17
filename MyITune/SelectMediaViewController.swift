@@ -13,10 +13,15 @@ struct MediaTypesDataSource {
     var isSelected: Bool
 }
 
+protocol SelectMediaDelegate: class {
+    func mediaSelectionDidFinish(dataSource: [MediaTypesDataSource])
+}
+
 class SelectMediaViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: SelectMediaDelegate?
    
-    var dataSource = [MediaTypesDataSource(title: "Album", isSelected: false),
+    private var dataSource = [MediaTypesDataSource(title: "Album", isSelected: false),
                       MediaTypesDataSource(title: "Artist", isSelected: false),
                       MediaTypesDataSource(title: "Book", isSelected: false),
                       MediaTypesDataSource(title: "Movie", isSelected: false),
@@ -29,7 +34,11 @@ class SelectMediaViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.mediaSelectionDidFinish(dataSource: dataSource)
+    }
 }
 
 extension SelectMediaViewController: UITableViewDataSource {
@@ -46,9 +55,8 @@ extension SelectMediaViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }
+
 extension SelectMediaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var mediaType = dataSource[indexPath.row]

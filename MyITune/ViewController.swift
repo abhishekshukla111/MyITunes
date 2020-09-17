@@ -10,19 +10,27 @@ import Foundation
 import UIKit
 
 class ViewController: UIViewController {
+    var selectedMediaTypes: [MediaTypesDataSource] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        ServiceManager().getSearchResults(searchTerm: "jackjohnson") { (data, error) in
-//            print("Data")
-//        }
         
         ServiceManager().fetchFilms()
         
     }
     
+    @IBAction func mediaTypeButtionAction(_ sender: Any) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SelectMediaViewController.identifier) as? SelectMediaViewController {
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension ViewController: SelectMediaDelegate {
+    func mediaSelectionDidFinish(dataSource: [MediaTypesDataSource]) {
+        selectedMediaTypes = dataSource
+    }
 }
 
 
-//https://itunes.apple.com/search?term=jackjohnson&amp;entity=musicVideo
