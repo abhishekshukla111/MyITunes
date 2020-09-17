@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51597A842513F27600E6A508 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51597A832513F27600E6A508 /* Identifiable.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 		517C31402513DFB90013D025 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313D2513DFB80013D025 /* NetworkRouter.swift */; };
 		517C31412513DFB90013D025 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313E2513DFB90013D025 /* ServiceManager.swift */; };
 		517C31422513DFB90013D025 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313F2513DFB90013D025 /* SearchModel.swift */; };
+		517C31442513F0230013D025 /* SelectMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C31432513F0220013D025 /* SelectMediaViewController.swift */; };
+		517C31462513F0480013D025 /* SelectMediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C31452513F0480013D025 /* SelectMediaTableViewCell.swift */; };
 		6A56AE6CD8B56FDE6E863E6B /* Pods_MyITuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FDD0A40F9985C936DDEA6D /* Pods_MyITuneTests.framework */; };
 		E4090E4FC5B9133D6C9656B4 /* Pods_MyITune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49A9627798D3FADB6967786 /* Pods_MyITune.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,7 @@
 /* Begin PBXFileReference section */
 		259CA04F6E5C6F15C5597663 /* Pods-MyITune.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITune.debug.xcconfig"; path = "Target Support Files/Pods-MyITune/Pods-MyITune.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5F6B65D9A7C184055F1528 /* Pods-MyITuneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITuneTests.release.xcconfig"; path = "Target Support Files/Pods-MyITuneTests/Pods-MyITuneTests.release.xcconfig"; sourceTree = "<group>"; };
+		51597A832513F27600E6A508 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		517C313D2513DFB80013D025 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		517C313E2513DFB90013D025 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		517C313F2513DFB90013D025 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		517C31432513F0220013D025 /* SelectMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMediaViewController.swift; sourceTree = "<group>"; };
+		517C31452513F0480013D025 /* SelectMediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMediaTableViewCell.swift; sourceTree = "<group>"; };
 		5B2ACAF7A5F8A54C02E48CEE /* Pods-MyITune.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITune.release.xcconfig"; path = "Target Support Files/Pods-MyITune/Pods-MyITune.release.xcconfig"; sourceTree = "<group>"; };
 		94FDD0A40F9985C936DDEA6D /* Pods_MyITuneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyITuneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E981AE4695DB696003E3170D /* Pods-MyITuneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITuneTests.debug.xcconfig"; path = "Target Support Files/Pods-MyITuneTests/Pods-MyITuneTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				517C313D2513DFB80013D025 /* NetworkRouter.swift */,
 				517C313F2513DFB90013D025 /* SearchModel.swift */,
 				517C313E2513DFB90013D025 /* ServiceManager.swift */,
+				517C31432513F0220013D025 /* SelectMediaViewController.swift */,
+				517C31452513F0480013D025 /* SelectMediaTableViewCell.swift */,
+				51597A832513F27600E6A508 /* Identifiable.swift */,
 				517C31212513DD890013D025 /* Main.storyboard */,
 				517C31242513DD8A0013D025 /* Assets.xcassets */,
 				517C31262513DD8A0013D025 /* LaunchScreen.storyboard */,
@@ -310,7 +319,10 @@
 			files = (
 				517C31202513DD890013D025 /* ViewController.swift in Sources */,
 				517C31402513DFB90013D025 /* NetworkRouter.swift in Sources */,
+				517C31442513F0230013D025 /* SelectMediaViewController.swift in Sources */,
 				517C311C2513DD890013D025 /* AppDelegate.swift in Sources */,
+				51597A842513F27600E6A508 /* Identifiable.swift in Sources */,
+				517C31462513F0480013D025 /* SelectMediaTableViewCell.swift in Sources */,
 				517C31422513DFB90013D025 /* SearchModel.swift in Sources */,
 				517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */,
 				517C31412513DFB90013D025 /* ServiceManager.swift in Sources */,
