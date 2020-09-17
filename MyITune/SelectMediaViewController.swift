@@ -8,9 +8,22 @@
 
 import UIKit
 
-class SelectMediaViewController: UIViewController {
+struct MediaTypesDataSource {
+    let title: String
+    var isSelected: Bool
+}
 
-    let dataSource = ["Album", "Artist", "Book", "Movie", "Music Video", "Podcast", "Song"]
+class SelectMediaViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+   
+    var dataSource = [MediaTypesDataSource(title: "Album", isSelected: false),
+                      MediaTypesDataSource(title: "Artist", isSelected: false),
+                      MediaTypesDataSource(title: "Book", isSelected: false),
+                      MediaTypesDataSource(title: "Movie", isSelected: false),
+                      MediaTypesDataSource(title: "Music Video", isSelected: false),
+                      MediaTypesDataSource(title: "Podcast", isSelected: false),
+                      MediaTypesDataSource(title: "Song", isSelected: false)]
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +39,9 @@ extension SelectMediaViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: SelectMediaTableViewCell.identifier) as? SelectMediaTableViewCell {
-            cell.mediaTitle.text = dataSource[indexPath.row]
+            let mediaType = dataSource[indexPath.row]
+            cell.mediaTitle.text = mediaType.title
+            cell.checkImageView.isHidden = !mediaType.isSelected
             return cell
         }
         return UITableViewCell()
@@ -35,5 +50,11 @@ extension SelectMediaViewController: UITableViewDataSource {
     
 }
 extension SelectMediaViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var mediaType = dataSource[indexPath.row]
+        mediaType.isSelected = !mediaType.isSelected
+        dataSource[indexPath.row] = mediaType
+        
+        tableView.reloadData()
+    }
 }
