@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		51597A842513F27600E6A508 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51597A832513F27600E6A508 /* Identifiable.swift */; };
+		51597A86251434B000E6A508 /* ResultContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51597A85251434B000E6A508 /* ResultContainerViewController.swift */; };
+		515D868E25143BF000F7F5D4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D868D25143BF000F7F5D4 /* ListViewController.swift */; };
+		515D869025143C0000F7F5D4 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D868F25143C0000F7F5D4 /* GridViewController.swift */; };
+		515D869225143E3B00F7F5D4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 		259CA04F6E5C6F15C5597663 /* Pods-MyITune.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITune.debug.xcconfig"; path = "Target Support Files/Pods-MyITune/Pods-MyITune.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5F6B65D9A7C184055F1528 /* Pods-MyITuneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyITuneTests.release.xcconfig"; path = "Target Support Files/Pods-MyITuneTests/Pods-MyITuneTests.release.xcconfig"; sourceTree = "<group>"; };
 		51597A832513F27600E6A508 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		51597A85251434B000E6A508 /* ResultContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContainerViewController.swift; sourceTree = "<group>"; };
+		515D868D25143BF000F7F5D4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		515D868F25143C0000F7F5D4 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,10 @@
 				517C311B2513DD890013D025 /* AppDelegate.swift */,
 				517C311D2513DD890013D025 /* SceneDelegate.swift */,
 				517C311F2513DD890013D025 /* ViewController.swift */,
+				51597A85251434B000E6A508 /* ResultContainerViewController.swift */,
+				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
+				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
+				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
 				517C313D2513DFB80013D025 /* NetworkRouter.swift */,
 				517C313F2513DFB90013D025 /* SearchModel.swift */,
 				517C313E2513DFB90013D025 /* ServiceManager.swift */,
@@ -322,10 +334,14 @@
 				517C31442513F0230013D025 /* SelectMediaViewController.swift in Sources */,
 				517C311C2513DD890013D025 /* AppDelegate.swift in Sources */,
 				51597A842513F27600E6A508 /* Identifiable.swift in Sources */,
+				515D868E25143BF000F7F5D4 /* ListViewController.swift in Sources */,
 				517C31462513F0480013D025 /* SelectMediaTableViewCell.swift in Sources */,
 				517C31422513DFB90013D025 /* SearchModel.swift in Sources */,
+				515D869025143C0000F7F5D4 /* GridViewController.swift in Sources */,
 				517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */,
 				517C31412513DFB90013D025 /* ServiceManager.swift in Sources */,
+				515D869225143E3B00F7F5D4 /* ListTableViewCell.swift in Sources */,
+				51597A86251434B000E6A508 /* ResultContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

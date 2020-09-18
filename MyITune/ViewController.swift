@@ -12,8 +12,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var mediaTypesLabel: UILabel!
     
-    var selectedMediaTypes: [MediaTypesDataSource] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,11 +24,16 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    @IBAction func submitButtonAction(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension ViewController: SelectMediaDelegate {
     func mediaSelectionDidFinish(dataSource: [MediaTypesDataSource]) {
-        selectedMediaTypes = dataSource
         formateSelectedMedia(selectedMediaTypes: dataSource)
     }
     
@@ -53,7 +56,7 @@ extension ViewController: SelectMediaDelegate {
             }
         }
         
-        var finalAttributedString = NSMutableAttributedString()
+        let finalAttributedString = NSMutableAttributedString()
         
         for mediaType in selectedMedia {
             let attributedString = NSAttributedString(string: mediaType, attributes: attributes)

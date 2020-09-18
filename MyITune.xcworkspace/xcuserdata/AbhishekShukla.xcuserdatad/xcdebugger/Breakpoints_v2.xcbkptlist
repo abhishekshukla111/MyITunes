@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F39B5D79-C24D-40F9-B145-2FD977742BB3"
-            shouldBeEnabled = "No"
+            uuid = "D2F4005E-0D1F-4731-BDB8-056C189070BB"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyITune/ViewController.swift"
+            filePath = "MyITune/ResultContainerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "formateSelectedMedia(selectedMediaTypes:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "listLayoutAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
