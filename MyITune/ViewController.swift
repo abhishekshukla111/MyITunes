@@ -11,11 +11,11 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mediaTypesLabel: UILabel!
+    var selectedEntity: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ServiceManager().fetchFilms()
     }
     
     @IBAction func mediaTypeButtionAction(_ sender: Any) {
@@ -26,9 +26,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
-            navigationController?.pushViewController(vc, animated: true)
+        if !selectedEntity.isEmpty {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
+                let term: String = "jackjohnson"
+                let viewModel = ResultViewModel(term: term, entities: selectedEntity)
+                
+                vc.viewModel = viewModel
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            showAlert()
         }
+    }
+    
+    private func showAlert() {
+        let message = "Please Select a media type and Artist"
+        let alertcontroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "OK", style: .default) { (_) in
+        
+        }
+        alertcontroller.addAction(actionOK)
+        present(alertcontroller, animated: true, completion: nil)
     }
 }
 
@@ -38,7 +56,6 @@ extension ViewController: SelectMediaDelegate {
     }
     
     private func formateSelectedMedia(selectedMediaTypes: [MediaTypesDataSource]) {
-        var selectedMedia: [String] = []
         let space = "  "
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
@@ -52,13 +69,13 @@ extension ViewController: SelectMediaDelegate {
         
         for mediaType in selectedMediaTypes {
             if mediaType.isSelected {
-                selectedMedia.append(mediaType.title)
+                selectedEntity.append(mediaType.title)
             }
         }
         
         let finalAttributedString = NSMutableAttributedString()
         
-        for mediaType in selectedMedia {
+        for mediaType in selectedEntity {
             let attributedString = NSAttributedString(string: mediaType, attributes: attributes)
             let spaceAttributedSting = NSAttributedString(string: space, attributes: blankAttributes)
             finalAttributedString.append(attributedString)

@@ -25,7 +25,7 @@ class SelectMediaViewController: UIViewController {
                       MediaTypesDataSource(title: "Artist", isSelected: false),
                       MediaTypesDataSource(title: "Book", isSelected: false),
                       MediaTypesDataSource(title: "Movie", isSelected: false),
-                      MediaTypesDataSource(title: "Music Video", isSelected: false),
+                      MediaTypesDataSource(title: "musicVideo", isSelected: false),
                       MediaTypesDataSource(title: "Podcast", isSelected: false),
                       MediaTypesDataSource(title: "Song", isSelected: false)]
  

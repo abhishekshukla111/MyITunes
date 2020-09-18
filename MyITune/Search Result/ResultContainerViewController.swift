@@ -14,11 +14,20 @@ class ResultContainerViewController: UIViewController {
     var listVC: ListViewController?
     var gridVC: GridViewController?
     
+    
+    var viewModel: ResultViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
-        // Do any additional setup after loading the view.
+        if let viewModel = self.viewModel {
+            for entity in viewModel.entities {
+                ServiceManager().getMedia(term: viewModel.term, entity: entity) { (results) in
+                    print(results)
+                }
+            }
+        }
     }
     
     @IBAction func listLayoutAction(_ sender: Any) {

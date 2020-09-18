@@ -12,6 +12,7 @@
 		515D868E25143BF000F7F5D4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D868D25143BF000F7F5D4 /* ListViewController.swift */; };
 		515D869025143C0000F7F5D4 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D868F25143C0000F7F5D4 /* GridViewController.swift */; };
 		515D869225143E3B00F7F5D4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */; };
+		515D86962514462F00F7F5D4 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D86952514462F00F7F5D4 /* ResultViewModel.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		515D868D25143BF000F7F5D4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		515D868F25143C0000F7F5D4 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		515D86952514462F00F7F5D4 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		515D86932514453D00F7F5D4 /* Select Media Type */ = {
+			isa = PBXGroup;
+			children = (
+				517C31432513F0220013D025 /* SelectMediaViewController.swift */,
+				517C31452513F0480013D025 /* SelectMediaTableViewCell.swift */,
+			);
+			path = "Select Media Type";
+			sourceTree = "<group>";
+		};
+		515D86942514456600F7F5D4 /* Search Result */ = {
+			isa = PBXGroup;
+			children = (
+				51597A85251434B000E6A508 /* ResultContainerViewController.swift */,
+				515D86952514462F00F7F5D4 /* ResultViewModel.swift */,
+				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
+				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
+				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
+			);
+			path = "Search Result";
+			sourceTree = "<group>";
+		};
 		517C310F2513DD890013D025 = {
 			isa = PBXGroup;
 			children = (
@@ -125,15 +148,11 @@
 				517C311B2513DD890013D025 /* AppDelegate.swift */,
 				517C311D2513DD890013D025 /* SceneDelegate.swift */,
 				517C311F2513DD890013D025 /* ViewController.swift */,
-				51597A85251434B000E6A508 /* ResultContainerViewController.swift */,
-				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
-				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
-				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
 				517C313D2513DFB80013D025 /* NetworkRouter.swift */,
 				517C313F2513DFB90013D025 /* SearchModel.swift */,
 				517C313E2513DFB90013D025 /* ServiceManager.swift */,
-				517C31432513F0220013D025 /* SelectMediaViewController.swift */,
-				517C31452513F0480013D025 /* SelectMediaTableViewCell.swift */,
+				515D86942514456600F7F5D4 /* Search Result */,
+				515D86932514453D00F7F5D4 /* Select Media Type */,
 				51597A832513F27600E6A508 /* Identifiable.swift */,
 				517C31212513DD890013D025 /* Main.storyboard */,
 				517C31242513DD8A0013D025 /* Assets.xcassets */,
@@ -330,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				517C31202513DD890013D025 /* ViewController.swift in Sources */,
+				515D86962514462F00F7F5D4 /* ResultViewModel.swift in Sources */,
 				517C31402513DFB90013D025 /* NetworkRouter.swift in Sources */,
 				517C31442513F0230013D025 /* SelectMediaViewController.swift in Sources */,
 				517C311C2513DD890013D025 /* AppDelegate.swift in Sources */,

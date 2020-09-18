@@ -10,8 +10,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-
-typealias OnCompletion = (_ data: Data, _ error: Error) -> Void
+typealias OnCompletion = (_ results: Results) -> Void
 //https://itunes.apple.com/search?term=jackjohnson&amp;entity=musicVideo
 
 
@@ -20,14 +19,16 @@ class ServiceManager {
     var dataTask: URLSessionDataTask?
     var errorMessage = ""
     
-    func fetchFilms() {
+    func getMedia(term: String, entity: String, completion: @escaping OnCompletion ) {
         let parameters: [String: String] = [
-            "term" : "jackjohnson",
-            "entity": "musicVideo"]
+            "term" : term,
+            "entity": entity]
 
         let request = NetworkRouter.ituneSearch(params: parameters)
         AF.request(request).validate().responseDecodable(of: Results.self) { (response) in
             guard let results = response.value else { return }
+            
+            completion(results)
             print("results: \(results)")
         }
     }
