@@ -11,7 +11,7 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var previewImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {

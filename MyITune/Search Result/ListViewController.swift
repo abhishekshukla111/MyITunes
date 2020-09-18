@@ -7,34 +7,27 @@
 //
 
 import UIKit
+typealias ImageSuccess = (_ image: UIImage?) -> Void
 
 class ListViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var viewModel: ResultViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadTableView()
     }
-    */
     
     func reloadTableView() {
         tableView.reloadData()
     }
-    
-    
-
 }
 
 extension ListViewController: UITableViewDataSource {
@@ -52,16 +45,64 @@ extension ListViewController: UITableViewDataSource {
         guard let rowItem = section.rowItems?[indexPath.row] as? ResultRow else { return UITableViewCell() }
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell {
-            cell.titleLabel.text = rowItem.artistName
-            cell.detailTextLabel?.text = rowItem.trackName
+            cell.nameLabel.text = rowItem.artistName
+            cell.descriptionLabel.text = rowItem.trackName
+            
+            if let urlString = rowItem.artworkUrl60, let url = URL(string: urlString) {
+                load(url: url) { (image) in
+                    cell.imageView?.image =  image
+                }
+            }
+            
             return cell
         }
         return UITableViewCell()
     }
-    
-    
 }
 
 extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        guard let section = viewModel?.sectionItems[section] else { return UIView() }
+        
+        let titleLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = section.sectionTitle
+            label.textColor = .white
+            label.contentMode = .left
+            
+            return label
+        }()
+        
+        let headerBaseView: UIView = {
+            let view = UIView()
+            view.backgroundColor = UIColor.darkGray
+            return view
+        }()
+        
+        headerBaseView.addSubview(titleLabel)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo:  headerBaseView.topAnchor, constant: 0),
+            titleLabel.bottomAnchor.constraint(equalTo: headerBaseView.bottomAnchor, constant: 0),
+            titleLabel.leadingAnchor.constraint(equalTo: headerBaseView.leadingAnchor, constant: 20),
+        ])
+        
+        return headerBaseView
+    }
     
+    func load(url: URL, completion: @escaping ImageSuccess) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        completion(image)
+                    }
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+    }
 }

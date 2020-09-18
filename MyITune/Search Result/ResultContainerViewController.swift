@@ -21,6 +21,7 @@ class ResultContainerViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
+        addListController()
         if let viewModel = self.viewModel {
             for entity in viewModel.entities {
                 ServiceManager().getMedia(term: viewModel.term, entity: entity) { (results) in
@@ -32,7 +33,7 @@ class ResultContainerViewController: UIViewController {
             }
         }
         
-        addListController()
+       
     }
     
     @IBAction func listLayoutAction(_ sender: Any) {
@@ -51,6 +52,7 @@ class ResultContainerViewController: UIViewController {
         if let gridController = gridVC {
             remove(gridController)
         }
+        listController.viewModel = viewModel
         listVC = listController
         add(listController)
     }
@@ -63,6 +65,7 @@ class ResultContainerViewController: UIViewController {
         if let listController = listVC {
             remove(listController)
         }
+        //gridController.viewModel = viewModel
         gridVC = gridController
         add(gridController)
     }

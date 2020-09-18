@@ -46,9 +46,13 @@ protocol RowItem {
 class ResultRow: RowItem {
     var artistName: String?
     var trackName: String?
+    var artworkUrl100: String?
+    var artworkUrl60: String?
     
-    init(artistName: String, trackName: String) {
+    init(artistName: String, trackName: String, artworkUrl100: String, artworkUrl60: String) {
         self.artistName = artistName
         self.trackName = trackName
+        self.artworkUrl100 = artworkUrl100
+        self.artworkUrl60 = artworkUrl60
     }
 }
