@@ -241,13 +241,13 @@
                                                             <rect key="frame" x="105" y="5" width="284" height="100.33333333333333"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP3-lZ-WV1">
-                                                                    <rect key="frame" x="8" y="7.9999999999999982" width="41.666666666666664" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="8" y="7.9999999999999982" width="268" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5b-ui-LVk">
-                                                                    <rect key="frame" x="8" y="48.333333333333336" width="35.333333333333336" height="17.000000000000007"/>
+                                                                    <rect key="frame" x="8" y="48.333333333333336" width="268" height="17.000000000000007"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -256,7 +256,9 @@
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="T5b-ui-LVk" firstAttribute="leading" secondItem="s99-9U-49h" secondAttribute="leading" constant="8" id="H6e-Ri-6TK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="T5b-ui-LVk" secondAttribute="trailing" constant="8" id="Hfm-Xz-9mu"/>
                                                                 <constraint firstItem="T5b-ui-LVk" firstAttribute="top" secondItem="hP3-lZ-WV1" secondAttribute="bottom" constant="20" id="KuM-n6-q1v"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hP3-lZ-WV1" secondAttribute="trailing" constant="8" id="L0g-GE-S6J"/>
                                                                 <constraint firstItem="hP3-lZ-WV1" firstAttribute="leading" secondItem="s99-9U-49h" secondAttribute="leading" constant="8" id="T0x-BA-hp0"/>
                                                                 <constraint firstItem="hP3-lZ-WV1" firstAttribute="top" secondItem="s99-9U-49h" secondAttribute="top" constant="8" id="eZi-I9-M4t"/>
                                                             </constraints>
