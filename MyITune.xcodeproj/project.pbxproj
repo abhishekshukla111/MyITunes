@@ -18,13 +18,13 @@
 		515D869C2514CC0900F7F5D4 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */; };
 		515D869E2514D73F00F7F5D4 /* GridHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */; };
 		515D86A02514E72F00F7F5D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 515D869F2514E72F00F7F5D4 /* .swiftlint.yml */; };
+		515D86A42514FB5800F7F5D4 /* MyITuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C31322513DD8B0013D025 /* MyITuneTests.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
 		517C31232513DD890013D025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517C31212513DD890013D025 /* Main.storyboard */; };
 		517C31252513DD8A0013D025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517C31242513DD8A0013D025 /* Assets.xcassets */; };
 		517C31282513DD8A0013D025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517C31262513DD8A0013D025 /* LaunchScreen.storyboard */; };
-		517C31332513DD8B0013D025 /* MyITuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C31322513DD8B0013D025 /* MyITuneTests.swift */; };
 		517C31402513DFB90013D025 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313D2513DFB80013D025 /* NetworkRouter.swift */; };
 		517C31412513DFB90013D025 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313E2513DFB90013D025 /* ServiceManager.swift */; };
 		517C31422513DFB90013D025 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C313F2513DFB90013D025 /* SearchModel.swift */; };
@@ -413,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C31332513DD8B0013D025 /* MyITuneTests.swift in Sources */,
+				515D86A42514FB5800F7F5D4 /* MyITuneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

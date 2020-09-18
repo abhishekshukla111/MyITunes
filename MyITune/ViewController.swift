@@ -72,7 +72,7 @@ extension ViewController: SelectMediaDelegate {
         formateSelectedMedia(selectedMedia: dataSource)
     }
     
-    private func formateSelectedMedia(selectedMedia: [MediaType]) {
+    func formateSelectedMedia(selectedMedia: [MediaType]) {
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .backgroundColor: UIColor.blue,
