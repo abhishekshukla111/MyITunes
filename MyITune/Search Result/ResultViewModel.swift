@@ -10,10 +10,10 @@ import Foundation
 
 class ResultViewModel {
     var term: String = "jackjohnson"
-    var entities: [String] = ["musicVideo"]
+    var entities: [MediaType] = []
     var sectionItems: [ResultSection] = []
     
-    init(term: String, entities: [String]) {
+    init(term: String, entities: [MediaType]) {
         self.term = term
         self.entities = entities
     }

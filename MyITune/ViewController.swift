@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mediaTypesLabel: UILabel!
-    var selectedEntity: [String] = []
+    var selectedEntities: [MediaType] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +26,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        if !selectedEntity.isEmpty {
+        if !selectedEntities.isEmpty {
             if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
                 let term: String = "jackjohnson"
-                let viewModel = ResultViewModel(term: term, entities: selectedEntity)
+                let viewModel = ResultViewModel(term: term, entities: selectedEntities)
                 
                 vc.viewModel = viewModel
                 navigationController?.pushViewController(vc, animated: true)
@@ -51,12 +51,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: SelectMediaDelegate {
-    func mediaSelectionDidFinish(dataSource: [MediaTypesDataSource]) {
+    func mediaSelectionDidFinish(dataSource: [MediaType]) {
         formateSelectedMedia(selectedMediaTypes: dataSource)
     }
     
-    private func formateSelectedMedia(selectedMediaTypes: [MediaTypesDataSource]) {
-        let space = "  "
+    private func formateSelectedMedia(selectedMediaTypes: [MediaType]) {
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .backgroundColor: UIColor.blue,
@@ -69,15 +68,15 @@ extension ViewController: SelectMediaDelegate {
         
         for mediaType in selectedMediaTypes {
             if mediaType.isSelected {
-                selectedEntity.append(mediaType.title)
+                selectedEntities.append(mediaType)
             }
         }
         
         let finalAttributedString = NSMutableAttributedString()
         
-        for mediaType in selectedEntity {
-            let attributedString = NSAttributedString(string: mediaType, attributes: attributes)
-            let spaceAttributedSting = NSAttributedString(string: space, attributes: blankAttributes)
+        for selectedEntity in selectedEntities {
+            let attributedString = NSAttributedString(string: selectedEntity.displayTitle, attributes: attributes)
+            let spaceAttributedSting = NSAttributedString(string: "  ", attributes: blankAttributes)
             finalAttributedString.append(attributedString)
             finalAttributedString.append(spaceAttributedSting)
         }

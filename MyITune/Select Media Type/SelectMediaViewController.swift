@@ -8,26 +8,27 @@
 
 import UIKit
 
-struct MediaTypesDataSource {
-    let title: String
+struct MediaType {
+    let displayTitle: String
     var isSelected: Bool
+    let entity: String
 }
 
 protocol SelectMediaDelegate: class {
-    func mediaSelectionDidFinish(dataSource: [MediaTypesDataSource])
+    func mediaSelectionDidFinish(dataSource: [MediaType])
 }
 
 class SelectMediaViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     weak var delegate: SelectMediaDelegate?
    
-    private var dataSource = [MediaTypesDataSource(title: "Album", isSelected: false),
-                      MediaTypesDataSource(title: "Artist", isSelected: false),
-                      MediaTypesDataSource(title: "Book", isSelected: false),
-                      MediaTypesDataSource(title: "Movie", isSelected: false),
-                      MediaTypesDataSource(title: "musicVideo", isSelected: false),
-                      MediaTypesDataSource(title: "Podcast", isSelected: false),
-                      MediaTypesDataSource(title: "Song", isSelected: false)]
+    private var dataSource = [MediaType(displayTitle: "Album",  isSelected: false, entity: "album"),
+                              MediaType(displayTitle: "Artist", isSelected: false, entity: "artist"),
+                              MediaType(displayTitle: "Book",   isSelected: false, entity: "book"),
+                              MediaType(displayTitle: "Movie",  isSelected: false, entity: "movie"),
+                              MediaType(displayTitle: "Music Video", isSelected: false, entity: "musicVideo"),
+                              MediaType(displayTitle: "Podcast", isSelected: false, entity: "podcast"),
+                              MediaType(displayTitle: "Song",    isSelected: false, entity: "song")]
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,7 @@ extension SelectMediaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: SelectMediaTableViewCell.identifier) as? SelectMediaTableViewCell {
             let mediaType = dataSource[indexPath.row]
-            cell.mediaTitle.text = mediaType.title
+            cell.mediaTitle.text = mediaType.displayTitle
             cell.checkImageView.isHidden = !mediaType.isSelected
             return cell
         }

@@ -23,10 +23,10 @@ class ResultContainerViewController: UIViewController {
         
         addListController()
         if let viewModel = self.viewModel {
-            for entity in viewModel.entities {
-                ServiceManager().getMedia(term: viewModel.term, entity: entity) { (results) in
+            for mediaType in viewModel.entities {
+                ServiceManager().getMedia(term: viewModel.term, entity: mediaType.entity) { (results) in
                     //print(results)
-                    viewModel.setupRowsForEntity(entity: entity, results: results)
+                    viewModel.setupRowsForEntity(entity: mediaType.displayTitle, results: results)
                     self.listVC?.viewModel = viewModel
                     self.listVC?.reloadTableView()
                 }
