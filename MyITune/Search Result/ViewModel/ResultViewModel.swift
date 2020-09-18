@@ -9,7 +9,7 @@
 import Foundation
 
 class ResultViewModel {
-    var term: String = "jackjohnson"
+    var term: String = ""
     var entities: [MediaType] = []
     var sectionItems: [ResultSection] = []
     

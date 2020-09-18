@@ -124,16 +124,40 @@
 			isa = PBXGroup;
 			children = (
 				51597A85251434B000E6A508 /* ResultContainerViewController.swift */,
-				515D86952514462F00F7F5D4 /* ResultViewModel.swift */,
-				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
-				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
-				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
-				515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */,
-				515D8697251450AA00F7F5D4 /* SectionItem.swift */,
-				515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */,
 				515D86992514ADB100F7F5D4 /* DetailViewController.swift */,
+				515D86A32514F77D00F7F5D4 /* ViewModel */,
+				515D86A22514F75D00F7F5D4 /* List */,
+				515D86A12514F74D00F7F5D4 /* Grid */,
 			);
 			path = "Search Result";
+			sourceTree = "<group>";
+		};
+		515D86A12514F74D00F7F5D4 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
+				515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */,
+				515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		515D86A22514F75D00F7F5D4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
+				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		515D86A32514F77D00F7F5D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				515D86952514462F00F7F5D4 /* ResultViewModel.swift */,
+				515D8697251450AA00F7F5D4 /* SectionItem.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		517C310F2513DD890013D025 = {

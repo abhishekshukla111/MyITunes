@@ -11,8 +11,6 @@ import SwiftyJSON
 import Alamofire
 
 typealias OnCompletion = (_ results: Results) -> Void
-//https://itunes.apple.com/search?term=jackjohnson&amp;entity=musicVideo
-
 
 class ServiceManager {
     let defaultSession = URLSession(configuration: .default)

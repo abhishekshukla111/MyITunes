@@ -116,6 +116,28 @@ class MyITuneTests: XCTestCase {
         } else {
             XCTFail("viewModel failed")
         }
+    }
+    
+    func testResultContainerViewControllerRowItem() {
+        let result = Result(artistName: "Some Great Artist", collectionName: "collectionName", trackName: "trackName", artworkUrl30: "artworkUrl30", artworkUrl60: "artworkUrl60", primaryGenreName: "primaryGenreName", previewUrl: "previewUrl")
+        
+        let results = Results(resultCount: 2, results: [result, result])
+        
+        let mediaType = MediaType(displayTitle: "displayTitle", isSelected: true, entity: "musicVideo")
+        
+        let resultViewModel = ResultViewModel(term: "jackjohnson", entities: [mediaType])
+        resultViewModel.setupRowsForEntity(entity: "musicVideo", results: results)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController else {
+            XCTFail("Row Item Creation Failed")
+            return
+        }
+        
+        vc.viewModel = resultViewModel
+        vc.loadViewIfNeeded()
+        
+        vc.viewDidLoad()
         
         let section = resultViewModel.sectionItems[0]
         let rowItem = section.rowItems?[0] as? ResultRow
