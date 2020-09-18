@@ -55,13 +55,13 @@ extension GridViewController: UICollectionViewDataSource {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GridCollectionViewCell.identifier, for: indexPath) as? GridCollectionViewCell {
             cell.nameLabel.text = rowItem.artistName
-//            cell.descriptionLabel.text = rowItem.trackName
-//            cell.activityIndcator.startAnimating()
+
+            cell.activityIndicator.startAnimating()
          
             if let urlString = rowItem.artworkUrl100, let url = URL(string: urlString) {
                 load(url: url) { (image) in
                     cell.previewImageView?.image =  image
-                    //cell.activityIndcator.stopAnimating()
+                    cell.activityIndicator.stopAnimating()
                     cell.setNeedsLayout()
                 }
             }

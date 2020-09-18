@@ -232,11 +232,6 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-sc-D7W">
                                                     <rect key="frame" x="10" y="9.9999999999999929" width="394" height="110.33333333333331"/>
                                                     <subviews>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="anJ-Wi-VZX">
-                                                            <rect key="frame" x="150" y="52" width="20" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </activityIndicatorView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s99-9U-49h">
                                                             <rect key="frame" x="105" y="5" width="284" height="100.33333333333333"/>
                                                             <subviews>
@@ -271,10 +266,15 @@
                                                                 <constraint firstAttribute="height" constant="100" id="Mvh-EO-fzf"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="anJ-Wi-VZX">
+                                                            <rect key="frame" x="45" y="45.333333333333336" width="20" height="20.000000000000007"/>
+                                                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="s99-9U-49h" secondAttribute="trailing" constant="5" id="B6V-Ph-J5N"/>
+                                                        <constraint firstItem="anJ-Wi-VZX" firstAttribute="centerX" secondItem="2Q2-M9-sNR" secondAttribute="centerX" id="ENc-iw-npf"/>
                                                         <constraint firstAttribute="bottom" secondItem="s99-9U-49h" secondAttribute="bottom" constant="5" id="ZRY-36-W25"/>
                                                         <constraint firstItem="s99-9U-49h" firstAttribute="top" secondItem="Sda-sc-D7W" secondAttribute="top" constant="5" id="ay3-oQ-2co"/>
                                                         <constraint firstItem="s99-9U-49h" firstAttribute="leading" secondItem="2Q2-M9-sNR" secondAttribute="trailing" id="nmo-yX-xHA"/>
@@ -282,6 +282,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="2Q2-M9-sNR" secondAttribute="bottom" constant="5" id="rK1-jD-tYn"/>
                                                         <constraint firstItem="2Q2-M9-sNR" firstAttribute="leading" secondItem="Sda-sc-D7W" secondAttribute="leading" constant="5" id="xot-ey-C59"/>
                                                         <constraint firstItem="s99-9U-49h" firstAttribute="leading" secondItem="2Q2-M9-sNR" secondAttribute="trailing" id="yT1-bb-Tdu"/>
+                                                        <constraint firstItem="anJ-Wi-VZX" firstAttribute="centerY" secondItem="2Q2-M9-sNR" secondAttribute="centerY" id="ya4-RM-w6b"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -375,6 +376,9 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="OwG-Me-tA7">
+                                                            <rect key="frame" x="77.666666666666671" y="60" width="20" height="20"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -383,6 +387,8 @@
                                                         <constraint firstItem="stK-5Q-m7s" firstAttribute="centerX" secondItem="gqx-Cp-Ect" secondAttribute="centerX" id="QYU-x2-cOJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="gqx-Cp-Ect" secondAttribute="trailing" constant="8" id="Xnt-iv-h9j"/>
                                                         <constraint firstAttribute="bottom" secondItem="stK-5Q-m7s" secondAttribute="bottom" constant="8" id="baK-gs-i7f"/>
+                                                        <constraint firstItem="OwG-Me-tA7" firstAttribute="centerY" secondItem="gqx-Cp-Ect" secondAttribute="centerY" id="cpa-sA-dTX"/>
+                                                        <constraint firstItem="OwG-Me-tA7" firstAttribute="centerX" secondItem="gqx-Cp-Ect" secondAttribute="centerX" id="ctH-oh-Hre"/>
                                                         <constraint firstAttribute="trailing" secondItem="stK-5Q-m7s" secondAttribute="trailing" constant="8" id="kL0-qQ-YJR"/>
                                                         <constraint firstItem="stK-5Q-m7s" firstAttribute="leading" secondItem="RPL-Hx-074" secondAttribute="leading" constant="8" id="o40-XP-N21"/>
                                                         <constraint firstItem="gqx-Cp-Ect" firstAttribute="top" secondItem="RPL-Hx-074" secondAttribute="top" constant="8" id="yQV-LD-EaF"/>
@@ -400,6 +406,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="191" height="214"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="OwG-Me-tA7" id="Z7x-OE-TQK"/>
                                             <outlet property="nameLabel" destination="stK-5Q-m7s" id="j90-oA-nVN"/>
                                             <outlet property="previewImageView" destination="gqx-Cp-Ect" id="PoM-hy-YIA"/>
                                         </connections>

@@ -12,5 +12,6 @@ class GridCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 }
