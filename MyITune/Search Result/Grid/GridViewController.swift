@@ -28,7 +28,7 @@ class GridViewController: UIViewController {
 }
 
 extension GridViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let section = viewModel?.sectionItems[indexPath.section] else { return}
         guard let rowItem = section.rowItems?[indexPath.row] as? ResultRow else { return }
         
@@ -108,31 +108,31 @@ extension GridViewController: UICollectionViewDataSource {
     }
 }
 
-// MARK: - Collection View Flow Layout Delegate
-extension GridViewController : UICollectionViewDelegateFlowLayout {
-  //1
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //2
-    let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-    let availableWidth = view.frame.width - paddingSpace
-    let widthPerItem = availableWidth / itemsPerRow
-    
-    return CGSize(width: widthPerItem, height: widthPerItem)
-  }
-  
-  //3
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      insetForSectionAt section: Int) -> UIEdgeInsets {
-    return sectionInsets
-  }
-  
-  // 4
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return sectionInsets.left
-  }
-}
+//// MARK: - Collection View Flow Layout Delegate
+//extension GridViewController : UICollectionViewDelegateFlowLayout {
+//  //1
+//  func collectionView(_ collectionView: UICollectionView,
+//                      layout collectionViewLayout: UICollectionViewLayout,
+//                      sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    //2
+//    let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+//    let availableWidth = view.frame.width - paddingSpace
+//    let widthPerItem = availableWidth / itemsPerRow
+//
+//    return CGSize(width: widthPerItem, height: widthPerItem)
+//  }
+//
+//  //3
+//  func collectionView(_ collectionView: UICollectionView,
+//                      layout collectionViewLayout: UICollectionViewLayout,
+//                      insetForSectionAt section: Int) -> UIEdgeInsets {
+//    return sectionInsets
+//  }
+//
+//  // 4
+//  func collectionView(_ collectionView: UICollectionView,
+//                      layout collectionViewLayout: UICollectionViewLayout,
+//                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//    return sectionInsets.left
+//  }
+//}

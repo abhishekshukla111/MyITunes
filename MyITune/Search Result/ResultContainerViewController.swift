@@ -13,9 +13,9 @@ protocol ResultContainerDelegate: class {
 }
 
 class ResultContainerViewController: UIViewController {
-    @IBOutlet weak var childView: UIView!
-    @IBOutlet weak var listLayoutButton: UIButton!
-    @IBOutlet weak var gridLayoutButton: UIButton!
+    @IBOutlet weak var childView: UIView?
+    @IBOutlet weak var listLayoutButton: UIButton?
+    @IBOutlet weak var gridLayoutButton: UIButton?
     
     weak var delegate: ResultContainerDelegate?
     
@@ -56,13 +56,13 @@ class ResultContainerViewController: UIViewController {
         addGridController()
     }
     
-    private func addListController() {
+    func addListController() {
         guard let listController = storyboard?.instantiateViewController(withIdentifier: ListViewController.identifier) as? ListViewController else {
             return
         }
         
-        listLayoutButton.backgroundColor = .darkGray
-        gridLayoutButton.backgroundColor = .gray
+        listLayoutButton?.backgroundColor = .darkGray
+        gridLayoutButton?.backgroundColor = .gray
         
         if let listController = listVC {
             remove(listController)
@@ -76,13 +76,13 @@ class ResultContainerViewController: UIViewController {
         add(listController)
     }
     
-    private func addGridController() {
+    func addGridController() {
         guard let gridController = storyboard?.instantiateViewController(withIdentifier: GridViewController.identifier) as? GridViewController else {
             return
         }
         
-        listLayoutButton.backgroundColor = .gray
-        gridLayoutButton.backgroundColor = .darkGray
+        listLayoutButton?.backgroundColor = .gray
+        gridLayoutButton?.backgroundColor = .darkGray
         
         if let listController = listVC {
             remove(listController)
@@ -100,6 +100,10 @@ class ResultContainerViewController: UIViewController {
 extension ResultContainerViewController {
     func add(_ child: UIViewController) {
         addChild(child)
+        
+        guard let childView = self.childView else {
+            return
+        }
         child.view.translatesAutoresizingMaskIntoConstraints = false
         
         childView.addSubview(child.view)

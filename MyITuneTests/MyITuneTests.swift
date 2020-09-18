@@ -129,6 +129,8 @@ class MyITuneTests: XCTestCase {
         }
         
         vc.viewModel = resultViewModel
+        vc.addGridController()
+        vc.addListController()
         vc.loadViewIfNeeded()
         
         vc.viewDidLoad()
@@ -247,6 +249,17 @@ class MyITuneTests: XCTestCase {
         
         vc.viewModel = resultViewModel
         vc.loadViewIfNeeded()
+        if let url = URL(string: "https://is5-ssl.mzstatic.com/image/thumb/Video128/v4/ab/bd/5b/abbd5ba0-26fd-75bd-040a-e4bdf085dcf5/source/100x100bb.jpg") {
+            
+            vc.load(url: url) { (image) in
+                if image != nil {
+                    XCTAssertTrue(true, "Rows Initialize successfully")
+                } else {
+                    XCTFail("ListViewControll Did not initialized correctly")
+                }
+            }
+        }
+        
         
         if vc.tableView.numberOfSections == 1 {
             XCTAssertTrue(true, "Section Initialized Successfully")
