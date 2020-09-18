@@ -47,10 +47,13 @@ extension ListViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell {
             cell.nameLabel.text = rowItem.artistName
             cell.descriptionLabel.text = rowItem.trackName
-            
-            if let urlString = rowItem.artworkUrl60, let url = URL(string: urlString) {
+            cell.activityIndcator.startAnimating()
+         
+            if let urlString = rowItem.artworkUrl100, let url = URL(string: urlString) {
                 load(url: url) { (image) in
-                    cell.imageView?.image =  image
+                    cell.previewImageView?.image =  image
+                    cell.activityIndcator.stopAnimating()
+                    cell.setNeedsLayout()
                 }
             }
             
@@ -103,6 +106,16 @@ extension ListViewController: UITableViewDelegate {
                     completion(nil)
                 }
             }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = viewModel?.sectionItems[indexPath.section] else { return}
+        guard let rowItem = section.rowItems?[indexPath.row] as? ResultRow else { return }
+        
+        if let previewURL = rowItem.previewUrl {
+            let vc = DetailViewController(urlString: previewURL)
+            parent?.present(vc, animated: true, completion: nil)
         }
     }
 }

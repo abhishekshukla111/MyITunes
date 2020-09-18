@@ -21,7 +21,7 @@ class ResultViewModel {
     func setupRowsForEntity(entity: String, results: Results) {
         var resultRows: [ResultRow] = []
         for result in results.results {
-            let resultRow = ResultRow(artistName: result.artistName ?? "Unknown", trackName: result.trackName ?? "Unknown", artworkUrl100: result.artworkUrl100 ?? "", artworkUrl60: result.artworkUrl60 ?? "")
+            let resultRow = ResultRow(artistName: result.artistName ?? "Unknown", trackName: result.trackName ?? "Unknown", artworkUrl100: result.artworkUrl100 ?? "", artworkUrl60: result.artworkUrl60 ?? "", previewUrl: result.previewUrl ?? "")
             resultRows.append(resultRow)
         }
         let section = ResultSection(title: entity, rowItems: resultRows)

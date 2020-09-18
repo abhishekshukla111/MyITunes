@@ -16,6 +16,7 @@ struct Result: Decodable {
     var artworkUrl60: String?
     var artworkUrl100: String?
     var primaryGenreName: String?
+    var previewUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case artistName
@@ -25,6 +26,7 @@ struct Result: Decodable {
         case artworkUrl60
         case artworkUrl100
         case primaryGenreName
+        case previewUrl
     }
 }
 

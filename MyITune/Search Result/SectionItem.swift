@@ -48,11 +48,13 @@ class ResultRow: RowItem {
     var trackName: String?
     var artworkUrl100: String?
     var artworkUrl60: String?
+    var previewUrl: String?
     
-    init(artistName: String, trackName: String, artworkUrl100: String, artworkUrl60: String) {
+    init(artistName: String, trackName: String, artworkUrl100: String, artworkUrl60: String, previewUrl: String) {
         self.artistName = artistName
         self.trackName = trackName
         self.artworkUrl100 = artworkUrl100
         self.artworkUrl60 = artworkUrl60
+        self.previewUrl = previewUrl
     }
 }

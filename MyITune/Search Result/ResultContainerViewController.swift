@@ -83,7 +83,15 @@ class ResultContainerViewController: UIViewController {
 extension ResultContainerViewController {
     func add(_ child: UIViewController) {
         addChild(child)
+        child.view.translatesAutoresizingMaskIntoConstraints = false
+        
         childView.addSubview(child.view)
+        NSLayoutConstraint.activate([
+            child.view.topAnchor.constraint(equalTo: childView.topAnchor),
+            child.view.trailingAnchor.constraint(equalTo: childView.trailingAnchor),
+            child.view.leadingAnchor.constraint(equalTo: childView.leadingAnchor),
+            child.view.bottomAnchor.constraint(equalTo: childView.bottomAnchor)
+        ])
         child.didMove(toParent: self)
     }
 

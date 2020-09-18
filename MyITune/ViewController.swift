@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mediaTypesLabel: UILabel!
+    @IBOutlet weak var artistTextField: UITextField!
+    
     var selectedMediaTypes: [MediaType] = []
     
     override func viewDidLoad() {
@@ -30,22 +32,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        if !selectedMediaTypes.isEmpty {
+        artistTextField.text = "brandy"
+        if let textfield = artistTextField, let textFieldText = textfield.text {
+            if textFieldText.isEmpty {
+                showAlert(withMessage: "Please Select a Artist.")
+                return
+            }
+            
+            selectedMediaTypes.append(MediaType(displayTitle: "Music Video", isSelected: true, entity: "musicVideo"))
+            if selectedMediaTypes.isEmpty {
+                showAlert(withMessage: "Please Select a Media Types.")
+                return
+            }
+            
+            
             if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
                 vc.delegate = self
-                let term: String = "jackjohnson"
+                let term: String = artistTextField.text ?? ""
                 let viewModel = ResultViewModel(term: term, entities: selectedMediaTypes)
                 
                 vc.viewModel = viewModel
                 navigationController?.pushViewController(vc, animated: true)
             }
         } else {
-            showAlert()
+            showAlert(withMessage: "Please Select a Media Type and Artist")
         }
     }
     
-    private func showAlert() {
-        let message = "Please Select a media type and Artist"
+    private func showAlert(withMessage message: String) {
         let alertcontroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .default) { (_) in
         
@@ -94,6 +108,17 @@ extension ViewController: ResultContainerDelegate {
     func resultContainerDidDismiss() {
         selectedMediaTypes.removeAll()
         mediaTypesLabel.text = "Please Select Media Type"
+        mediaTypesLabel.textColor = .lightGray
+        artistTextField.text = ""
+    }
+}
+
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
