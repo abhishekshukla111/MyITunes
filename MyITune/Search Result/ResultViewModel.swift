@@ -11,10 +11,20 @@ import Foundation
 class ResultViewModel {
     var term: String = "jackjohnson"
     var entities: [String] = ["musicVideo"]
-    var sessionItems: [String] = []
+    var sectionItems: [ResultSection] = []
     
     init(term: String, entities: [String]) {
         self.term = term
         self.entities = entities
+    }
+    
+    func setupRowsForEntity(entity: String, results: Results) {
+        var resultRows: [ResultRow] = []
+        for result in results.results {
+            let resultRow = ResultRow(artistName: result.artistName ?? "Unknown", trackName: result.trackName ?? "Unknown")
+            resultRows.append(resultRow)
+        }
+        let section = ResultSection(title: entity, rowItems: resultRows)
+        sectionItems.append(section)
     }
 }

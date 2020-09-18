@@ -13,6 +13,7 @@
 		515D869025143C0000F7F5D4 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D868F25143C0000F7F5D4 /* GridViewController.swift */; };
 		515D869225143E3B00F7F5D4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */; };
 		515D86962514462F00F7F5D4 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D86952514462F00F7F5D4 /* ResultViewModel.swift */; };
+		515D8698251450AA00F7F5D4 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D8697251450AA00F7F5D4 /* SectionItem.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		515D868F25143C0000F7F5D4 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		515D86952514462F00F7F5D4 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		515D8697251450AA00F7F5D4 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
 				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
 				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
+				515D8697251450AA00F7F5D4 /* SectionItem.swift */,
 			);
 			path = "Search Result";
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				517C31202513DD890013D025 /* ViewController.swift in Sources */,
 				515D86962514462F00F7F5D4 /* ResultViewModel.swift in Sources */,
 				517C31402513DFB90013D025 /* NetworkRouter.swift in Sources */,
+				515D8698251450AA00F7F5D4 /* SectionItem.swift in Sources */,
 				517C31442513F0230013D025 /* SelectMediaViewController.swift in Sources */,
 				517C311C2513DD890013D025 /* AppDelegate.swift in Sources */,
 				51597A842513F27600E6A508 /* Identifiable.swift in Sources */,

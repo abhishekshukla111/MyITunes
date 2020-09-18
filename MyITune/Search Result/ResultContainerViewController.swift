@@ -24,13 +24,26 @@ class ResultContainerViewController: UIViewController {
         if let viewModel = self.viewModel {
             for entity in viewModel.entities {
                 ServiceManager().getMedia(term: viewModel.term, entity: entity) { (results) in
-                    print(results)
+                    //print(results)
+                    viewModel.setupRowsForEntity(entity: entity, results: results)
+                    self.listVC?.viewModel = viewModel
+                    self.listVC?.reloadTableView()
                 }
             }
         }
+        
+        addListController()
     }
     
     @IBAction func listLayoutAction(_ sender: Any) {
+        addListController()
+    }
+    
+    @IBAction func gridLayoutAction(_ sender: Any) {
+        addGridController()
+    }
+    
+    private func addListController() {
         guard let listController = storyboard?.instantiateViewController(withIdentifier: ListViewController.identifier) as? ListViewController else {
             return
         }
@@ -42,7 +55,7 @@ class ResultContainerViewController: UIViewController {
         add(listController)
     }
     
-    @IBAction func gridLayoutAction(_ sender: Any) {
+    private func addGridController() {
         guard let gridController = storyboard?.instantiateViewController(withIdentifier: GridViewController.identifier) as? GridViewController else {
             return
         }

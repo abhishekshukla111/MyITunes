@@ -200,7 +200,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListTableViewCell" rowHeight="105" id="5dL-HU-gAc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListTableViewCell" rowHeight="105" id="5dL-HU-gAc" customClass="ListTableViewCell" customModule="MyITune" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5dL-HU-gAc" id="IXy-gR-UOr">
@@ -251,8 +251,17 @@
                                                 <constraint firstAttribute="trailing" secondItem="s99-9U-49h" secondAttribute="trailing" id="tLl-Nq-tKL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="T5b-ui-LVk" id="riR-YN-39G"/>
+                                            <outlet property="previewImageView" destination="2Q2-M9-sNR" id="U6M-sG-jhJ"/>
+                                            <outlet property="titleLabel" destination="hP3-lZ-WV1" id="lPA-F6-Xmv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HO3-An-MFh" id="cf5-51-h2q"/>
+                                    <outlet property="delegate" destination="HO3-An-MFh" id="tAV-Yj-HID"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -264,6 +273,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lkE-Fi-JKX"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="i3Y-7c-di4" id="Smf-Ei-xgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tt-QD-qdp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

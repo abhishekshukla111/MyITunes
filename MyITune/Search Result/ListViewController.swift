@@ -10,6 +10,9 @@ import UIKit
 
 class ListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var viewModel: ResultViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +28,40 @@ class ListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    
 
+}
+
+extension ListViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel?.sectionItems.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let section = viewModel?.sectionItems[section]
+        return section?.rowCount ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let section = viewModel?.sectionItems[indexPath.section] else { return UITableViewCell() }
+        guard let rowItem = section.rowItems?[indexPath.row] as? ResultRow else { return UITableViewCell() }
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell {
+            cell.titleLabel.text = rowItem.artistName
+            cell.detailTextLabel?.text = rowItem.trackName
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    
+}
+
+extension ListViewController: UITableViewDelegate {
+    
 }
