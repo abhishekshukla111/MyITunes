@@ -17,6 +17,7 @@
 		515D869A2514ADB100F7F5D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D86992514ADB100F7F5D4 /* DetailViewController.swift */; };
 		515D869C2514CC0900F7F5D4 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */; };
 		515D869E2514D73F00F7F5D4 /* GridHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */; };
+		515D86A02514E72F00F7F5D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 515D869F2514E72F00F7F5D4 /* .swiftlint.yml */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		515D86992514ADB100F7F5D4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHeaderCollectionView.swift; sourceTree = "<group>"; };
+		515D869F2514E72F00F7F5D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				51597A832513F27600E6A508 /* Identifiable.swift */,
 				517C31212513DD890013D025 /* Main.storyboard */,
 				517C31242513DD8A0013D025 /* Assets.xcassets */,
+				515D869F2514E72F00F7F5D4 /* .swiftlint.yml */,
 				517C31262513DD8A0013D025 /* LaunchScreen.storyboard */,
 				517C31292513DD8A0013D025 /* Info.plist */,
 			);
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515D86A02514E72F00F7F5D4 /* .swiftlint.yml in Resources */,
 				517C31282513DD8A0013D025 /* LaunchScreen.storyboard in Resources */,
 				517C31252513DD8A0013D025 /* Assets.xcassets in Resources */,
 				517C31232513DD890013D025 /* Main.storyboard in Resources */,
