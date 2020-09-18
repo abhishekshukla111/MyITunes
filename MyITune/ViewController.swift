@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        artistTextField.placeholder = "Please search by Artist"
         
     }
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     @IBAction func submitButtonAction(_ sender: Any) {
         if let textfield = artistTextField, let textFieldText = textfield.text {
             if textFieldText.isEmpty {
-                showAlert(withMessage: "Please Select a Artist.")
+                showAlert(withMessage: "Please Select an Artist.")
                 return
             }
             

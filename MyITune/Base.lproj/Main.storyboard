@@ -26,7 +26,9 @@
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q46-Cw-FxE">
-                                <rect key="frame" x="20" y="276" width="374" height="34"/>
+                                <rect key="frame" x="20" y="251" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -34,13 +36,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specify the parameter for the content to be searched." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1V-0d-owd">
-                                <rect key="frame" x="20" y="325" width="374" height="40.666666666666686"/>
+                                <rect key="frame" x="20" y="300" width="374" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFm-Z4-D2C">
-                                <rect key="frame" x="20" y="400.66666666666669" width="374" height="110"/>
+                                <rect key="frame" x="20" y="375.66666666666669" width="374" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Please Select Media Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-1b-WWx">
                                         <rect key="frame" x="8" y="8" width="320" height="94"/>
@@ -63,7 +65,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="8ah-1b-WWx" secondAttribute="bottom" constant="8" id="0Ue-Z8-ths"/>
                                     <constraint firstItem="c7V-LF-n0a" firstAttribute="leading" secondItem="8ah-1b-WWx" secondAttribute="trailing" constant="4" id="4yH-ka-Sms"/>
@@ -84,16 +86,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNc-rS-p9D">
-                                <rect key="frame" x="157" y="530.66666666666663" width="100" height="40"/>
+                                <rect key="frame" x="132" y="505.66666666666674" width="150" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4e1-RA-b7P"/>
-                                    <constraint firstAttribute="width" constant="100" id="CnQ-Jj-McD"/>
+                                    <constraint firstAttribute="width" constant="150" id="CnQ-Jj-McD"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -118,7 +120,7 @@
                             <constraint firstItem="F1V-0d-owd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MkQ-O1-xg7"/>
                             <constraint firstItem="yZ3-Dg-gUz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RMl-fa-X4s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hFm-Z4-D2C" secondAttribute="trailing" constant="20" id="Sev-6C-brY"/>
-                            <constraint firstItem="Q46-Cw-FxE" firstAttribute="top" secondItem="cPz-zn-70u" secondAttribute="bottom" constant="45" id="TQu-l9-aeg"/>
+                            <constraint firstItem="Q46-Cw-FxE" firstAttribute="top" secondItem="cPz-zn-70u" secondAttribute="bottom" constant="20" id="TQu-l9-aeg"/>
                             <constraint firstItem="cPz-zn-70u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ZZ0-3p-mgC"/>
                             <constraint firstItem="F1V-0d-owd" firstAttribute="top" secondItem="Q46-Cw-FxE" secondAttribute="bottom" constant="15" id="bwy-qU-H1R"/>
                             <constraint firstItem="yZ3-Dg-gUz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j5P-s7-BGo"/>
@@ -531,7 +533,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fxN-6J-L2A" firstAttribute="bottom" secondItem="zBR-5A-dCl" secondAttribute="bottom" id="AwH-HW-lSd"/>
                             <constraint firstItem="fxN-6J-L2A" firstAttribute="trailing" secondItem="zBR-5A-dCl" secondAttribute="trailing" id="BTr-3P-imk"/>
