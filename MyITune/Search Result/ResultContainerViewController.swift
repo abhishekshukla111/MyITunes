@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol ResultContainerDelegate: class {
+    func resultContainerDidDismiss()
+}
+
 class ResultContainerViewController: UIViewController {
     @IBOutlet weak var childView: UIView!
+    weak var delegate: ResultContainerDelegate?
     
     var listVC: ListViewController?
     var gridVC: GridViewController?
@@ -32,8 +37,12 @@ class ResultContainerViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
-       
+        delegate?.resultContainerDidDismiss()
     }
     
     @IBAction func listLayoutAction(_ sender: Any) {

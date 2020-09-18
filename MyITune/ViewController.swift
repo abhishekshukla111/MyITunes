@@ -11,11 +11,15 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mediaTypesLabel: UILabel!
-    var selectedEntities: [MediaType] = []
+    var selectedMediaTypes: [MediaType] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @IBAction func mediaTypeButtionAction(_ sender: Any) {
@@ -26,10 +30,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        if !selectedEntities.isEmpty {
+        if !selectedMediaTypes.isEmpty {
             if let vc = storyboard?.instantiateViewController(withIdentifier: ResultContainerViewController.identifier) as? ResultContainerViewController {
+                vc.delegate = self
                 let term: String = "jackjohnson"
-                let viewModel = ResultViewModel(term: term, entities: selectedEntities)
+                let viewModel = ResultViewModel(term: term, entities: selectedMediaTypes)
                 
                 vc.viewModel = viewModel
                 navigationController?.pushViewController(vc, animated: true)
@@ -52,10 +57,10 @@ class ViewController: UIViewController {
 
 extension ViewController: SelectMediaDelegate {
     func mediaSelectionDidFinish(dataSource: [MediaType]) {
-        formateSelectedMedia(selectedMediaTypes: dataSource)
+        formateSelectedMedia(selectedMedia: dataSource)
     }
     
-    private func formateSelectedMedia(selectedMediaTypes: [MediaType]) {
+    private func formateSelectedMedia(selectedMedia: [MediaType]) {
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .backgroundColor: UIColor.blue,
@@ -66,16 +71,16 @@ extension ViewController: SelectMediaDelegate {
             .backgroundColor: UIColor.clear,
             .font: UIFont.boldSystemFont(ofSize: 20)]
         
-        for mediaType in selectedMediaTypes {
+        for mediaType in selectedMedia {
             if mediaType.isSelected {
-                selectedEntities.append(mediaType)
+                selectedMediaTypes.append(mediaType)
             }
         }
         
         let finalAttributedString = NSMutableAttributedString()
         
-        for selectedEntity in selectedEntities {
-            let attributedString = NSAttributedString(string: selectedEntity.displayTitle, attributes: attributes)
+        for selectedMediaType in selectedMediaTypes {
+            let attributedString = NSAttributedString(string: selectedMediaType.displayTitle, attributes: attributes)
             let spaceAttributedSting = NSAttributedString(string: "  ", attributes: blankAttributes)
             finalAttributedString.append(attributedString)
             finalAttributedString.append(spaceAttributedSting)
@@ -85,4 +90,10 @@ extension ViewController: SelectMediaDelegate {
     }
 }
 
+extension ViewController: ResultContainerDelegate {
+    func resultContainerDidDismiss() {
+        selectedMediaTypes.removeAll()
+        mediaTypesLabel.text = "Please Select Media Type"
+    }
+}
 
