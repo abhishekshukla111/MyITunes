@@ -32,14 +32,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        artistTextField.text = "brandy"
         if let textfield = artistTextField, let textFieldText = textfield.text {
             if textFieldText.isEmpty {
                 showAlert(withMessage: "Please Select a Artist.")
                 return
             }
             
-            selectedMediaTypes.append(MediaType(displayTitle: "Music Video", isSelected: true, entity: "musicVideo"))
             if selectedMediaTypes.isEmpty {
                 showAlert(withMessage: "Please Select a Media Types.")
                 return

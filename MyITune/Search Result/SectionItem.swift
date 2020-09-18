@@ -17,13 +17,6 @@ extension SectionItem {
     var rowCount: Int {
         return 1
     }
-    
-    var isCollapsible: Bool {
-        if rowCount == 0 {
-            return false
-        }
-        return true
-    }
 }
 
 class ResultSection: SectionItem {
