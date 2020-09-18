@@ -146,51 +146,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-7Q-8QT">
-                                <rect key="frame" x="0.0" y="44" width="206.66666666666666" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-7Q-8QT">
+                                <rect key="frame" x="10" y="49" width="194.66666666666666" height="40"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="da9-ie-sGz"/>
                                 </constraints>
                                 <state key="normal" title="List Layout"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="listLayoutAction:" destination="bxn-dd-vNQ" eventType="touchUpInside" id="4ag-Rm-3VV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-lY-lN4">
-                                <rect key="frame" x="207.66666666666663" y="44" width="206.33333333333337" height="40"/>
+                                <rect key="frame" x="209.66666666666663" y="49" width="194.33333333333337" height="40"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="K9m-zS-ptX"/>
                                 </constraints>
                                 <state key="normal" title="Grid Layout"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="gridLayoutAction:" destination="bxn-dd-vNQ" eventType="touchUpInside" id="M46-3p-8d4"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anY-sP-xJb" userLabel="ChildView">
-                                <rect key="frame" x="0.0" y="85" width="414" height="811"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WOO-lY-lN4" firstAttribute="leading" secondItem="3Sd-7Q-8QT" secondAttribute="trailing" constant="1" id="45M-Ob-gRg"/>
+                            <constraint firstItem="WOO-lY-lN4" firstAttribute="leading" secondItem="3Sd-7Q-8QT" secondAttribute="trailing" constant="5" id="45M-Ob-gRg"/>
                             <constraint firstItem="anY-sP-xJb" firstAttribute="trailing" secondItem="zO2-aq-HYo" secondAttribute="trailing" id="5TQ-Bs-b8y"/>
-                            <constraint firstItem="anY-sP-xJb" firstAttribute="top" secondItem="3Sd-7Q-8QT" secondAttribute="bottom" constant="1" id="6mV-UC-sNI"/>
-                            <constraint firstItem="WOO-lY-lN4" firstAttribute="width" secondItem="3Sd-7Q-8QT" secondAttribute="width" id="I6N-yD-d5o"/>
-                            <constraint firstItem="WOO-lY-lN4" firstAttribute="top" secondItem="zO2-aq-HYo" secondAttribute="top" id="Mnd-TB-z7y"/>
+                            <constraint firstItem="anY-sP-xJb" firstAttribute="top" secondItem="3Sd-7Q-8QT" secondAttribute="bottom" constant="5" id="6mV-UC-sNI"/>
+                            <constraint firstItem="WOO-lY-lN4" firstAttribute="top" secondItem="zO2-aq-HYo" secondAttribute="top" constant="5" id="Mnd-TB-z7y"/>
                             <constraint firstAttribute="bottom" secondItem="anY-sP-xJb" secondAttribute="bottom" id="Sq7-9P-9Jf"/>
                             <constraint firstItem="anY-sP-xJb" firstAttribute="leading" secondItem="zO2-aq-HYo" secondAttribute="leading" id="XA8-7H-ZC6"/>
-                            <constraint firstItem="3Sd-7Q-8QT" firstAttribute="top" secondItem="zO2-aq-HYo" secondAttribute="top" id="nne-us-BUB"/>
-                            <constraint firstItem="3Sd-7Q-8QT" firstAttribute="leading" secondItem="zO2-aq-HYo" secondAttribute="leading" id="ubT-uf-EM7"/>
-                            <constraint firstItem="WOO-lY-lN4" firstAttribute="trailing" secondItem="zO2-aq-HYo" secondAttribute="trailing" id="w7I-ge-kG2"/>
+                            <constraint firstItem="anY-sP-xJb" firstAttribute="top" secondItem="WOO-lY-lN4" secondAttribute="bottom" constant="5" id="h0c-Ew-ner"/>
+                            <constraint firstItem="3Sd-7Q-8QT" firstAttribute="top" secondItem="zO2-aq-HYo" secondAttribute="top" constant="5" id="nne-us-BUB"/>
+                            <constraint firstItem="3Sd-7Q-8QT" firstAttribute="leading" secondItem="zO2-aq-HYo" secondAttribute="leading" constant="10" id="ubT-uf-EM7"/>
+                            <constraint firstItem="WOO-lY-lN4" firstAttribute="trailing" secondItem="zO2-aq-HYo" secondAttribute="trailing" constant="-10" id="w7I-ge-kG2"/>
+                            <constraint firstItem="WOO-lY-lN4" firstAttribute="width" secondItem="3Sd-7Q-8QT" secondAttribute="width" id="yjD-iO-rlW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zO2-aq-HYo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Media" id="wuG-sE-D0V"/>
                     <connections>
                         <outlet property="childView" destination="anY-sP-xJb" id="oLQ-Gx-B16"/>
+                        <outlet property="gridLayoutButton" destination="WOO-lY-lN4" id="h7Z-s3-Vfa"/>
+                        <outlet property="listLayoutButton" destination="3Sd-7Q-8QT" id="lRC-cq-EYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y96-9N-KFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -401,7 +414,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="XuI-Kd-6RT" secondAttribute="bottom" constant="6" id="HMW-dL-PVJ"/>
                                         <constraint firstItem="XuI-Kd-6RT" firstAttribute="top" secondItem="vuD-Ud-WOG" secondAttribute="topMargin" constant="7" id="Lhi-nc-QPG"/>

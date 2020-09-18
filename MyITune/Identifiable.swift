@@ -32,3 +32,12 @@ extension UICollectionViewCell: Identifiable {
 extension UICollectionReusableView: Identifiable {
     
 }
+
+
+extension UIColor {
+    static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+        return UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: 1.0)
+    }
+    
+    static let black1E1E1E: UIColor = .rgb(30, 30, 30) //Dark Black Color used for Titles
+}

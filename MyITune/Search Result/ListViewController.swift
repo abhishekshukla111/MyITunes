@@ -80,7 +80,7 @@ extension ListViewController: UITableViewDelegate {
         
         let headerBaseView: UIView = {
             let view = UIView()
-            view.backgroundColor = UIColor.darkGray
+            view.backgroundColor = UIColor.black1E1E1E
             return view
         }()
         
@@ -89,7 +89,7 @@ extension ListViewController: UITableViewDelegate {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo:  headerBaseView.topAnchor, constant: 0),
             titleLabel.bottomAnchor.constraint(equalTo: headerBaseView.bottomAnchor, constant: 0),
-            titleLabel.leadingAnchor.constraint(equalTo: headerBaseView.leadingAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: headerBaseView.leadingAnchor, constant: 20)
         ])
         
         return headerBaseView

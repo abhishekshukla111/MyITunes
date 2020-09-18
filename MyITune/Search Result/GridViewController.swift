@@ -28,7 +28,7 @@ class GridViewController: UIViewController {
 }
 
 extension GridViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) {
         guard let section = viewModel?.sectionItems[indexPath.section] else { return}
         guard let rowItem = section.rowItems?[indexPath.row] as? ResultRow else { return }
         
@@ -43,11 +43,11 @@ extension GridViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return viewModel?.sectionItems.count ?? 0
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let section = viewModel?.sectionItems[section]
         return section?.rowCount ?? 0
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let section = viewModel?.sectionItems[indexPath.section] else { return UICollectionViewCell() }

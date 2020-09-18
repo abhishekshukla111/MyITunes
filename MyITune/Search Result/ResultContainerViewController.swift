@@ -14,6 +14,9 @@ protocol ResultContainerDelegate: class {
 
 class ResultContainerViewController: UIViewController {
     @IBOutlet weak var childView: UIView!
+    @IBOutlet weak var listLayoutButton: UIButton!
+    @IBOutlet weak var gridLayoutButton: UIButton!
+    
     weak var delegate: ResultContainerDelegate?
     
     var listVC: ListViewController?
@@ -58,6 +61,13 @@ class ResultContainerViewController: UIViewController {
             return
         }
         
+        listLayoutButton.backgroundColor = .darkGray
+        gridLayoutButton.backgroundColor = .gray
+        
+        if let listController = listVC {
+            remove(listController)
+        }
+        
         if let gridController = gridVC {
             remove(gridController)
         }
@@ -71,9 +81,16 @@ class ResultContainerViewController: UIViewController {
             return
         }
         
+        listLayoutButton.backgroundColor = .gray
+        gridLayoutButton.backgroundColor = .darkGray
+        
         if let listController = listVC {
             remove(listController)
         }
+        if let gridController = gridVC {
+            remove(gridController)
+        }
+        
         gridController.viewModel = viewModel
         gridVC = gridController
         add(gridController)
