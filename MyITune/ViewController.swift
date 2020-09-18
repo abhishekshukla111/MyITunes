@@ -92,6 +92,11 @@ extension ViewController: SelectMediaDelegate {
         
         let finalAttributedString = NSMutableAttributedString()
         
+        if selectedMediaTypes.isEmpty {
+            mediaTypesLabel.text = "Please Select Media Type"
+            return
+        }
+        
         for selectedMediaType in selectedMediaTypes {
             let attributedString = NSAttributedString(string: selectedMediaType.displayTitle, attributes: attributes)
             let spaceAttributedSting = NSAttributedString(string: "  ", attributes: blankAttributes)
