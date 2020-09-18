@@ -15,6 +15,8 @@
 		515D86962514462F00F7F5D4 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D86952514462F00F7F5D4 /* ResultViewModel.swift */; };
 		515D8698251450AA00F7F5D4 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D8697251450AA00F7F5D4 /* SectionItem.swift */; };
 		515D869A2514ADB100F7F5D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D86992514ADB100F7F5D4 /* DetailViewController.swift */; };
+		515D869C2514CC0900F7F5D4 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */; };
+		515D869E2514D73F00F7F5D4 /* GridHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */; };
 		517C311C2513DD890013D025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311B2513DD890013D025 /* AppDelegate.swift */; };
 		517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311D2513DD890013D025 /* SceneDelegate.swift */; };
 		517C31202513DD890013D025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C311F2513DD890013D025 /* ViewController.swift */; };
@@ -52,6 +54,8 @@
 		515D86952514462F00F7F5D4 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		515D8697251450AA00F7F5D4 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		515D86992514ADB100F7F5D4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
+		515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHeaderCollectionView.swift; sourceTree = "<group>"; };
 		517C31182513DD890013D025 /* MyITune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyITune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C311B2513DD890013D025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517C311D2513DD890013D025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +126,9 @@
 				515D868D25143BF000F7F5D4 /* ListViewController.swift */,
 				515D869125143E3B00F7F5D4 /* ListTableViewCell.swift */,
 				515D868F25143C0000F7F5D4 /* GridViewController.swift */,
+				515D869B2514CC0900F7F5D4 /* GridCollectionViewCell.swift */,
 				515D8697251450AA00F7F5D4 /* SectionItem.swift */,
+				515D869D2514D73F00F7F5D4 /* GridHeaderCollectionView.swift */,
 				515D86992514ADB100F7F5D4 /* DetailViewController.swift */,
 			);
 			path = "Search Result";
@@ -363,10 +369,12 @@
 				51597A842513F27600E6A508 /* Identifiable.swift in Sources */,
 				515D869A2514ADB100F7F5D4 /* DetailViewController.swift in Sources */,
 				515D868E25143BF000F7F5D4 /* ListViewController.swift in Sources */,
+				515D869E2514D73F00F7F5D4 /* GridHeaderCollectionView.swift in Sources */,
 				517C31462513F0480013D025 /* SelectMediaTableViewCell.swift in Sources */,
 				517C31422513DFB90013D025 /* SearchModel.swift in Sources */,
 				515D869025143C0000F7F5D4 /* GridViewController.swift in Sources */,
 				517C311E2513DD890013D025 /* SceneDelegate.swift in Sources */,
+				515D869C2514CC0900F7F5D4 /* GridCollectionViewCell.swift in Sources */,
 				517C31412513DFB90013D025 /* ServiceManager.swift in Sources */,
 				515D869225143E3B00F7F5D4 /* ListTableViewCell.swift in Sources */,
 				51597A86251434B000E6A508 /* ResultContainerViewController.swift in Sources */,

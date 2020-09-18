@@ -325,45 +325,121 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ixz-Os-iWe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yxk-E4-8eI">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="itemSize" width="191" height="214"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KE0-EO-a9t">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridCollectionViewCell" id="KE0-EO-a9t" customClass="GridCollectionViewCell" customModule="MyITune" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="191" height="214"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6RL-Mn-F6Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6RL-Mn-F6Z" customClass="GridCollectionViewCell" customModule="MyITune" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="214"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-Hx-074">
+                                                    <rect key="frame" x="8" y="8" width="175" height="198"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqx-Cp-Ect">
+                                                            <rect key="frame" x="8" y="8" width="159" height="124"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="FGb-jO-maB"/>
+                                                                <constraint firstAttribute="width" constant="100" id="rJ2-dC-pkc"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stK-5Q-m7s">
+                                                            <rect key="frame" x="8" y="140" width="159" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="8nJ-rT-uhn"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="gqx-Cp-Ect" firstAttribute="leading" secondItem="RPL-Hx-074" secondAttribute="leading" constant="8" id="1tm-1R-Rfg"/>
+                                                        <constraint firstItem="stK-5Q-m7s" firstAttribute="top" secondItem="gqx-Cp-Ect" secondAttribute="bottom" constant="8" id="CmZ-h4-nG9"/>
+                                                        <constraint firstItem="stK-5Q-m7s" firstAttribute="centerX" secondItem="gqx-Cp-Ect" secondAttribute="centerX" id="QYU-x2-cOJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gqx-Cp-Ect" secondAttribute="trailing" constant="8" id="Xnt-iv-h9j"/>
+                                                        <constraint firstAttribute="bottom" secondItem="stK-5Q-m7s" secondAttribute="bottom" constant="8" id="baK-gs-i7f"/>
+                                                        <constraint firstAttribute="trailing" secondItem="stK-5Q-m7s" secondAttribute="trailing" constant="8" id="kL0-qQ-YJR"/>
+                                                        <constraint firstItem="stK-5Q-m7s" firstAttribute="leading" secondItem="RPL-Hx-074" secondAttribute="leading" constant="8" id="o40-XP-N21"/>
+                                                        <constraint firstItem="gqx-Cp-Ect" firstAttribute="top" secondItem="RPL-Hx-074" secondAttribute="top" constant="8" id="yQV-LD-EaF"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="RPL-Hx-074" secondAttribute="trailing" constant="8" id="XT1-bB-EXw"/>
+                                                <constraint firstItem="RPL-Hx-074" firstAttribute="top" secondItem="6RL-Mn-F6Z" secondAttribute="top" constant="8" id="bGN-Rr-fie"/>
+                                                <constraint firstItem="RPL-Hx-074" firstAttribute="leading" secondItem="6RL-Mn-F6Z" secondAttribute="leading" constant="8" id="cRk-I4-EdN"/>
+                                                <constraint firstAttribute="bottom" secondItem="RPL-Hx-074" secondAttribute="bottom" constant="8" id="vKm-39-9Ba"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="191" height="214"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="stK-5Q-m7s" id="j90-oA-nVN"/>
+                                            <outlet property="previewImageView" destination="gqx-Cp-Ect" id="PoM-hy-YIA"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="GridHeaderCollectionView" id="vuD-Ud-WOG" customClass="GridHeaderCollectionView" customModule="MyITune" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuI-Kd-6RT">
+                                            <rect key="frame" x="20" y="15" width="378" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XuI-Kd-6RT" secondAttribute="bottom" constant="6" id="HMW-dL-PVJ"/>
+                                        <constraint firstItem="XuI-Kd-6RT" firstAttribute="top" secondItem="vuD-Ud-WOG" secondAttribute="topMargin" constant="7" id="Lhi-nc-QPG"/>
+                                        <constraint firstItem="XuI-Kd-6RT" firstAttribute="leading" secondItem="vuD-Ud-WOG" secondAttribute="leadingMargin" constant="12" id="NGL-ot-FiN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XuI-Kd-6RT" secondAttribute="trailing" constant="8" id="ZnD-GI-ZDN"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerTitle" destination="XuI-Kd-6RT" id="QA8-a5-x7e"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ExR-Qt-eGL" id="4Yk-qP-yDj"/>
+                                    <outlet property="delegate" destination="ExR-Qt-eGL" id="CGu-Uh-nz8"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ixz-Os-iWe" secondAttribute="bottom" id="ESk-qK-XNX"/>
                             <constraint firstItem="ixz-Os-iWe" firstAttribute="trailing" secondItem="SRr-kR-AHU" secondAttribute="trailing" id="Hca-MJ-gDg"/>
-                            <constraint firstItem="ixz-Os-iWe" firstAttribute="bottom" secondItem="SRr-kR-AHU" secondAttribute="bottom" id="csX-cu-u42"/>
                             <constraint firstItem="ixz-Os-iWe" firstAttribute="top" secondItem="SRr-kR-AHU" secondAttribute="top" id="lSF-Bn-pRz"/>
                             <constraint firstItem="ixz-Os-iWe" firstAttribute="leading" secondItem="SRr-kR-AHU" secondAttribute="leading" id="wmY-Gm-1Zc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SRr-kR-AHU"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ixz-Os-iWe" id="5BG-QV-dR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLI-m8-3c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409.375" y="819.71830985915494"/>
+            <point key="canvasLocation" x="2407.2463768115945" y="819.64285714285711"/>
         </scene>
         <!--Select Media Types-->
         <scene sceneID="bd8-kh-bhm">

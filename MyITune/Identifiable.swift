@@ -24,3 +24,11 @@ extension UITableViewCell: Identifiable {
 extension UIViewController: Identifiable {
     // By conforming to `Identifiable` protocol, `UIViewController` will have default `identifier` static property which returns string value of its class name.
 }
+
+extension UICollectionViewCell: Identifiable {
+    
+}
+
+extension UICollectionReusableView: Identifiable {
+    
+}

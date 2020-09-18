@@ -74,7 +74,7 @@ class ResultContainerViewController: UIViewController {
         if let listController = listVC {
             remove(listController)
         }
-        //gridController.viewModel = viewModel
+        gridController.viewModel = viewModel
         gridVC = gridController
         add(gridController)
     }
