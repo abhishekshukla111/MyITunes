@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     private func showAlert(withMessage message: String) {
         let alertcontroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .default) { (_) in
-        
+            
         }
         alertcontroller.addAction(actionOK)
         present(alertcontroller, animated: true, completion: nil)
@@ -78,7 +78,7 @@ extension ViewController: SelectMediaDelegate {
             .foregroundColor: UIColor.white,
             .backgroundColor: UIColor.blue,
             .font: UIFont.boldSystemFont(ofSize: 20)]
-
+        
         let blankAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .backgroundColor: UIColor.clear,

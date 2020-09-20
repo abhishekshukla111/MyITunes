@@ -21,8 +21,6 @@ class ResultContainerViewController: UIViewController {
     
     var listVC: ListViewController?
     var gridVC: GridViewController?
-    
-    
     var viewModel: ResultViewModel?
     
     override func viewDidLoad() {
@@ -33,7 +31,6 @@ class ResultContainerViewController: UIViewController {
         if let viewModel = self.viewModel {
             for mediaType in viewModel.entities {
                 ServiceManager().getMedia(term: viewModel.term, entity: mediaType.entity) { (results) in
-                    //print(results)
                     viewModel.setupRowsForEntity(entity: mediaType.displayTitle, results: results)
                     self.listVC?.viewModel = viewModel
                     self.listVC?.reloadTableView()
@@ -71,6 +68,7 @@ class ResultContainerViewController: UIViewController {
         if let gridController = gridVC {
             remove(gridController)
         }
+        
         listController.viewModel = viewModel
         listVC = listController
         add(listController)
@@ -87,6 +85,7 @@ class ResultContainerViewController: UIViewController {
         if let listController = listVC {
             remove(listController)
         }
+        
         if let gridController = gridVC {
             remove(gridController)
         }
