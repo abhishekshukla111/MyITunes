@@ -34,7 +34,7 @@ extension GridViewController: UICollectionViewDelegate {
         
         if let previewURL = rowItem.previewUrl {
             let vc = DetailViewController(urlString: previewURL)
-            parent?.present(vc, animated: true, completion: nil)
+            present(vc, animated: true, completion: nil)
         }
     }
 }
